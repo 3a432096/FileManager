@@ -9,21 +9,7 @@ import { Component } from '@angular/core';
 	styleUrl: './album.component.scss'
 })
 export class AlbumComponent {
-	list = [
-		{
-			src: 'https://dummyimage.com/600x400/000/fff'
-		},
-		{
-			src: 'https://dummyimage.com/600x400/000/fff'
-		},
-		{
-			src: 'https://dummyimage.com/600x400/000/fff'
-		},
-		{
-			src: 'https://dummyimage.com/600x400/000/fff'
-		},
-		{
-			src: 'https://dummyimage.com/600x400/000/fff'
-		}
-	];
+	list = Array(48).fill({
+		src: 'https://dummyimage.com/600x400/000/fff'
+	});
 }

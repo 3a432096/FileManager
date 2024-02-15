@@ -1,0 +1,5 @@
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 8px">
+	<div *ngFor="let item of list">
+		<img [src]="item.src" style="width: 100%; border-radius: 4px" />
+	</div>
+</div>

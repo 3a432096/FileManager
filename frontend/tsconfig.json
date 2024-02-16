@@ -22,7 +22,9 @@
 		"useDefineForClassFields": false,
 		"lib": ["ES2022", "dom"],
 		"paths": {
-			"@pages/*": ["src/app/pages/*"]
+			"@environment": ["src/environments/environment"],
+			"@pages/*": ["src/app/pages/*"],
+			"@api": ["src/app/api/index"]
 		}
 	},
 	"angularCompilerOptions": {

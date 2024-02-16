@@ -1,3 +1,21 @@
-<div style="padding: 16px">
-	<router-outlet />
+<div style="display: grid; grid-template-rows: max-content 1fr; height: 100dvh; overflow: hidden">
+	<div
+		style="
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 50px;
+			padding: 8px 16px;
+			border-bottom: 1px solid #ddd;
+		"
+	>
+		<div>123</div>
+		<div style="display: flex; gap: 8px">
+			<a [routerLink]="'/album'">album</a>
+			<a [routerLink]="'/todos'">todos</a>
+		</div>
+	</div>
+	<div style="padding: 16px; height: 100%; overflow: auto">
+		<router-outlet />
+	</div>
 </div>

@@ -3,23 +3,20 @@ import { Component, OnInit } from '@angular/core';
 import { TodosApiService } from '@api';
 
 @Component({
-	selector: 'app-album',
+	selector: 'app-todos',
 	standalone: true,
 	imports: [NgFor, NgIf],
-	templateUrl: './album.component.html',
-	styleUrl: './album.component.scss'
+	templateUrl: './todos.component.html',
+	styleUrl: './todos.component.scss'
 })
-export class AlbumComponent implements OnInit {
-	list = Array(48).fill({
-		src: 'https://dummyimage.com/600x400/000/fff'
-	});
-
+export class TodosComponent implements OnInit {
+	todoList: any[] = [];
 	constructor(private todosApi: TodosApiService) {}
 
 	ngOnInit(): void {
 		this.todosApi.getList().subscribe({
 			next: (response) => {
-				console.log(response);
+				this.todoList = response;
 			}
 		});
 	}

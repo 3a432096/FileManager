@@ -1,0 +1,12 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "build frontend source to WebApi Site",
+  "main": "index.js",
+  "scripts": {
+    "build-vue": "cd ../FileManager.Vue && npm install && npm run build",
+    "copy-vue": "cd ../FileManager.Vue && xcopy dist ..\\FileManager.Api\\view /E /I /Y"
+  },
+  "author": "Brian",
+  "license": "ISC"
+}

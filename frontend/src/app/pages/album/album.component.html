@@ -1,3 +1,11 @@
-<div style="height: 100%; width: 100%; background: #fff">
-	<div id="canvas_container" style="height: 100%; width: 100%"></div>
+<div style="height: 100%; display: grid; grid-template-rows: max-content 1fr; gap: 16px">
+	<div style="height: 100px; background: #efefef; border-radius: 4px">
+		<button (click)="getJson()">getJson</button>
+		<input #fileUpload type="file" accept="image/*" (change)="onFileUpload($event)"/>
+	</div>
+	<div
+		#canvasContainer
+		id="canvas_container"
+		style="height: 100%; width: 100%; background: #fff; border: 1px solid #ddd; border-radius: 4px"
+	></div>
 </div>
